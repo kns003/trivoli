@@ -1,0 +1,23 @@
+<html>
+<h1>Welcome to app</h1>
+{% if travel %}
+<form action="/travel/edit/{{travel.id}}/" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+</form>
+{% else %}
+<form action="/travel/" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+</form>
+
+OR
+
+<h2><a href="/travel/create_from_file/">CREATE FROM FILE</a></h2>
+
+{% endif %}
+
+
+</html>

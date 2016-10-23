@@ -1,0 +1,4 @@
+{% for travel in travels %}
+{{forloop.counter}} . <a href="/travel/view/{{travel.id}}/">{{travel.url_name}}</a> &nbsp;&nbsp;
+<a href="/travel/edit/{{travel.id}}/">Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/travel/delete/{{travel.id}}/">DELETE</a><br>
+{% endfor %}
